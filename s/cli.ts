@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import {serve} from "./fns/serve.js"
+import {serve} from "./serve.js"
 import {arg, cli, command, number, param, string} from "@benev/argv"
 
 await cli(process.argv, {

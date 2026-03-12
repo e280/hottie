@@ -1,5 +1,6 @@
+import {templateString as html} from "@e280/stz"
 
-export const script = (wsPort: number) => `
+export const script = (wsPort: number) => html`
 	<script type="module">
 		const socket = new WebSocket("ws://localhost:${wsPort}")
 		const events = {
