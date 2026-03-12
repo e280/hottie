@@ -11,7 +11,7 @@
 		"s"
 	],
 	"bin": {
-		"hottie": "./x/hottie.js"
+		"hottie": "x/cli.js"
 	},
 	"scripts": {
 		"build": "rm -rf x && mkdir x && tsc && cp s/index.html x/index.html && chmod 665 x/index.html",
