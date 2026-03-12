@@ -13,7 +13,7 @@ jobs:
       id-token: write
     environment:
       name: npm
-      url: "https://www.npmjs.com/package/@e280/spark"
+      url: "https://www.npmjs.com/package/@e280/hottie"
     steps:
     - uses: actions/checkout@v6
     - uses: actions/setup-node@v6
