@@ -1,9 +1,7 @@
 
-import chokidar from "chokidar"
-import {debounce} from "@e280/stz"
-
 import {Options} from "./fns/types.js"
 import {logIntro} from "./fns/log/intro.js"
+import {onChange} from "./fns/on-change.js"
 import {logReload} from "./fns/log/reload.js"
 import {serveHttp} from "./fns/serve-http.js"
 import {serveWebsocket} from "./fns/serve-websocket.js"
@@ -13,11 +11,10 @@ export async function serve(options: Options) {
 	const {sendReload} = await serveWebsocket(options)
 
 	let count = 1
-	chokidar.watch(options.root, {ignoreInitial: true})
-		.on("all", debounce(100, () => {
-			logReload(count++)
-			sendReload()
-		}))
+	onChange(options, () => {
+		logReload(count++)
+		sendReload()
+	})
 
 	logIntro(options)
 }

@@ -5,6 +5,8 @@ export type Options = {
 	root: string
 	port: number
 	wsPort: number
+	debounce: number
+	proxy: string | undefined
 }
 
 export type Middleware = (

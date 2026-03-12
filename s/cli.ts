@@ -12,16 +12,17 @@ await cli(process.argv, {
 		],
 		params: {
 			port: param.default(number, "8080", {help: "http port"}),
+			debounce: param.default(number, "100", {help: "file watcher hesitation in milliseconds"}),
+			proxy: param.optional(string, {help: "fallback url to proxy requests to for 404s"}),
 			"ws-port": param.default(number, "8079", {help: "web socket port"}),
 		},
 
 		async execute({args, params}) {
 			const {root} = args
-			const {port} = params
+			const {port, debounce, proxy} = params
 			const wsPort = params["ws-port"]
 
-			serve({root, port, wsPort})
-
+			await serve({root, port, wsPort, debounce, proxy})
 		},
 	}),
 }).execute()
