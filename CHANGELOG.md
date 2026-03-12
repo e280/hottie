@@ -1,5 +1,5 @@
 
-# `@e280/spark` changelog
+# `@e280/hottie` changelog
 - 🟥 breaking change
 - 🔶 deprecation or possible breaking change
 - 🍏 harmless addition, fix, or enhancement

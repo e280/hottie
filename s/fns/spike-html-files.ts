@@ -2,7 +2,6 @@
 import fs from "node:fs/promises"
 
 import {logHtml} from "./log/html.js"
-import {logFile} from "./log/file.js"
 import {script} from "./parts/script.js"
 import {Middleware, Options} from "./types.js"
 import {injectScript} from "./parts/inject-script.js"
@@ -24,7 +23,6 @@ export const spikeHtmlFiles = (options: Options): Middleware => async(req, res, 
 		return
 	} catch {}
 
-	logFile(req.url)
 	await next()
 }
 

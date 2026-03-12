@@ -1,12 +1,12 @@
 
-# ⚡ spark — *tiny hot-reloading http server*
+# 💅 hottie — *tiny hot-reloading http server*
 
 ```bash
-npm install --save-dev @e280/spark
+npm install --save-dev @e280/hottie
 ```
 
 ```bash
-spark x
+hottie x
 ```
 
 serves `./x/` at `http://localhost:8080`, and refreshes the browser when files change.
@@ -17,7 +17,7 @@ serves `./x/` at `http://localhost:8080`, and refreshes the browser when files c
     file watcher hesitation in milliseconds. *(default `100`)*
 - **--proxy**  
     requests fallback to this proxy url.
-- **--nope, -n**  
+- **--cold, -c**  
     actually don't do the hot-reloading, just be a server.
 
 

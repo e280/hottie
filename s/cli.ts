@@ -4,8 +4,8 @@ import {serve} from "./serve.js"
 import {arg, cli, command, number, param, string} from "@benev/argv"
 
 await cli(process.argv, {
-	name: "spark",
-	readme: "https://github.com/e280/spark",
+	name: "hottie",
+	readme: "https://github.com/e280/hottie",
 	help: "tiny hot-reloading http server.",
 	commands: command({
 		args: [
@@ -21,7 +21,7 @@ await cli(process.argv, {
 			proxy: param.optional(string, {
 				help: "requests fallback to this proxy url.",
 			}),
-			nope: param.flag("-n", {
+			cold: param.flag("-c", {
 				help: "actually don't do the hot-reloading, just be a server.",
 			}),
 		},

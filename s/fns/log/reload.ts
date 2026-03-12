@@ -7,11 +7,13 @@ export const logReload = (count: number) => console.log("\n" + [
 	"⚡",
 
 	pipe("reload")
-		.to(color.brightYellow)
-		.to(color.bold)
+		.to(color.brightMagenta)
 		.done(),
 
-	count,
+	pipe(`${count}`)
+		.to(color.magenta)
+		.to(color.dim)
+		.done(),
 
 ].join(" "))
 

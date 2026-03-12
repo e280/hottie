@@ -8,7 +8,10 @@ export const logFile = (url?: string) => console.log([
 		.to(color.blue)
 		.done(),
 
-	url,
+	pipe(url ?? "")
+		.to(color.blue)
+		.to(color.dim)
+		.done(),
 
 ].join(" "))
 

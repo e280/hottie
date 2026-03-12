@@ -2,14 +2,14 @@
 import {pipe} from "@e280/stz"
 import {color} from "@benev/argv"
 
-export const logHtml = (url?: string) => console.log([
+export const logNope = (url?: string) => console.log([
 
-	pipe("html")
-		.to(color.green)
+	pipe("nope")
+		.to(color.red)
 		.done(),
 
 	pipe(url ?? "")
-		.to(color.green)
+		.to(color.red)
 		.to(color.dim)
 		.done(),
 

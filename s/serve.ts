@@ -11,11 +11,13 @@ export async function serve(options: Options) {
 
 	await serveHttp(options, wss)
 
-	let count = 1
-	onChange(options, () => {
-		logReload(count++)
-		sendReload()
-	})
+	if (!options.cold) {
+		let count = 1
+		onChange(options, () => {
+			logReload(count++)
+			sendReload()
+		})
+	}
 
 	logIntro(options)
 }

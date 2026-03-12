@@ -1,5 +1,5 @@
 {
-	"name": "@e280/spark",
+	"name": "@e280/hottie",
 	"version": "0.1.0-0",
 	"description": "⚡ tiny hot-reloading http server",
 	"license": "MIT",
@@ -11,7 +11,7 @@
 		"s"
 	],
 	"bin": {
-		"spark": "./x/spark.js"
+		"hottie": "./x/hottie.js"
 	},
 	"scripts": {
 		"build": "rm -rf x && mkdir x && tsc && cp s/index.html x/index.html && chmod 665 x/index.html",
@@ -38,12 +38,12 @@
 		"hot reload",
 		"hot reloading"
 	],
-	"homepage": "https://github.com/e280/spark#readme",
+	"homepage": "https://github.com/e280/hottie#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/e280/spark.git"
+		"url": "git+https://github.com/e280/hottie.git"
 	},
 	"bugs": {
-		"url": "https://github.com/e280/spark/issues"
+		"url": "https://github.com/e280/hottie/issues"
 	}
 }

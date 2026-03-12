@@ -6,7 +6,7 @@ export type Options = {
 	port: number
 	debounce: number
 	proxy: string | undefined
-	nope: boolean
+	cold: boolean
 }
 
 export type Middleware = (
