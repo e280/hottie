@@ -4,9 +4,9 @@ import http from "node:http"
 export type Options = {
 	root: string
 	port: number
-	wsPort: number
 	debounce: number
 	proxy: string | undefined
+	nope: boolean
 }
 
 export type Middleware = (

@@ -1,7 +1,7 @@
 
 import http from "node:http"
 
-export async function listen(server: http.Server, port: number) {
+export async function listen(port: number, server: http.Server) {
 	return new Promise((resolve, reject) => {
 		server.once("listening", resolve)
 		server.on("error", reject)

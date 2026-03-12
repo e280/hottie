@@ -6,17 +6,25 @@ npm install --save-dev @e280/spark
 ```
 
 ```bash
-spark x --port="8080" --ws-port="8079"
+spark x
 ```
-- defaults shown.
-- this example serves up the `./x/` directory on port 8080.
-- if anything changes in the x dir, it will trigger the browser to refresh the page.
+
+serves `./x/` at `http://localhost:8080`, and refreshes the browser when files change.
+
+- **--port**  
+    http port to serve on. *(default `8080`)*
+- **--debounce**  
+    file watcher hesitation in milliseconds. *(default `100`)*
+- **--proxy**  
+    requests fallback to this proxy url.
+- **--nope, -n**  
+    actually don't do the hot-reloading, just be a server.
 
 
 
 <br/>
 
-## 🧑‍💻 octo is by e280
+## 🧑‍💻 by e280
 reward us with github stars  
 build with us at https://e280.org/ but only if you're cool  
 

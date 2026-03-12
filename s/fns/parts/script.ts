@@ -1,8 +1,10 @@
+
 import {templateString as html} from "@e280/stz"
 
-export const script = (wsPort: number) => html`
+export const script = () => html`
 	<script type="module">
-		const socket = new WebSocket("ws://localhost:${wsPort}")
+		const protocol = location.protocol === "https:" ? "wss:" : "ws:"
+		const socket = new WebSocket(protocol + "//" + location.host + "/e280-spark-ws")
 		const events = {
 			message: () => location.reload(),
 			open: () => console.log("⚡ spark hot-reload connected"),

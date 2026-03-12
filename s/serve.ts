@@ -7,8 +7,9 @@ import {serveHttp} from "./fns/serve-http.js"
 import {serveWebsocket} from "./fns/serve-websocket.js"
 
 export async function serve(options: Options) {
-	await serveHttp(options)
-	const {sendReload} = await serveWebsocket(options)
+	const {wss, sendReload} = serveWebsocket()
+
+	await serveHttp(options, wss)
 
 	let count = 1
 	onChange(options, () => {

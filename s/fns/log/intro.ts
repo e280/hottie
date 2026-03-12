@@ -5,7 +5,6 @@ import {color} from "@benev/argv"
 export const logIntro = (options: {
 		root: string
 		port: number
-		wsPort: number
 	}) => {
 
 	console.log([
@@ -18,16 +17,6 @@ export const logIntro = (options: {
 
 		pipe(options.root)
 			.to(color.yellow)
-			.to(color.dim)
-			.done(),
-
-		pipe(`--port ${options.port}`)
-			.to(color.blue)
-			.to(color.dim)
-			.done(),
-
-		pipe(`--ws-port ${options.wsPort}`)
-			.to(color.blue)
 			.to(color.dim)
 			.done(),
 	].join(" "))

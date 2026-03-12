@@ -16,7 +16,7 @@ export const spikeHtmlFiles = (options: Options): Middleware => async(req, res, 
 	if (htmlPath) try {
 		const html = await fs.readFile(htmlPath, "utf8")
 		logHtml(req.url)
-		const body = injectScript(html, script(options.wsPort))
+		const body = injectScript(html, script())
 		res.statusCode = 200
 		res.setHeader("content-type", "text/html; charset=utf-8")
 		res.setHeader("content-length", Buffer.byteLength(body))

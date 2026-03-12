@@ -2,7 +2,9 @@
 import http from "node:http"
 import {Middleware} from "../types.js"
 
-export function chain(...middlewares: Middleware[]): http.RequestListener {
+export function chain(...middlewares: (Middleware | undefined)[]): http.RequestListener {
+	middlewares = middlewares.filter(Boolean)
+
 	return async (req, res) => {
 		let i = 0
 
