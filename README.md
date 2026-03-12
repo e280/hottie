@@ -1,5 +1,5 @@
 
-# 💅 hottie — *tiny hot-reloading http server*
+# 💅 hottie — *hot-reloading http server*
 
 ```bash
 npm install --save-dev @e280/hottie

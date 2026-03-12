@@ -1,7 +1,7 @@
 {
 	"name": "@e280/hottie",
 	"version": "0.1.0-0",
-	"description": "⚡ tiny hot-reloading http server",
+	"description": "⚡ hot-reloading http server",
 	"license": "MIT",
 	"author": "Chase Moskal <chasemoskal@gmail.com>",
 	"type": "module",

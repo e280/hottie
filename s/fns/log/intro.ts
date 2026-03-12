@@ -26,8 +26,8 @@ export const logIntro = (options: Options) => {
 	)
 
 	const info = options.cold
-		? `tiny http server. (--cold disabled hot-reloading)`
-		: `tiny hot-reloading http server.`
+		? `http server. (--cold disabled hot-reloading)`
+		: `hot-reloading http server.`
 
 	console.log(
 		pipe(info)

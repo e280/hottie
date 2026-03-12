@@ -6,7 +6,7 @@ import {arg, cli, command, number, param, string} from "@benev/argv"
 await cli(process.argv, {
 	name: "hottie",
 	readme: "https://github.com/e280/hottie",
-	help: "tiny hot-reloading http server.",
+	help: "hot-reloading http server.",
 	commands: command({
 		args: [
 			arg("root").default(string, "x", {help: "directory to serve"}),
