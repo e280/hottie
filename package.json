@@ -1,0 +1,48 @@
+{
+	"name": "@e280/spark",
+	"version": "0.1.0-0",
+	"description": "⚡ tiny hot-reloading http server",
+	"license": "MIT",
+	"author": "Chase Moskal <chasemoskal@gmail.com>",
+	"type": "module",
+	"sideEffects": false,
+	"files": [
+		"x",
+		"s"
+	],
+	"bin": {
+		"spark": "./x/spark.js"
+	},
+	"scripts": {
+		"build": "rm -rf x && mkdir x && tsc && cp s/index.html x/index.html && chmod 665 x/index.html",
+		"test": "exit 0",
+		"start": "node x/cli.js",
+		"count": "find s -path '*/_archive' -prune -o -name '*.ts' -exec wc -l {} +"
+	},
+	"dependencies": {
+		"@benev/argv": "^0.3.14",
+		"@e280/stz": "^0.2.24",
+		"chokidar": "^5.0.0",
+		"sirv": "^3.0.2",
+		"ws": "^8.19.0"
+	},
+	"devDependencies": {
+		"@types/node": "^25.4.0",
+		"@types/ws": "^8.18.1",
+		"typescript": "^5.9.3"
+	},
+	"keywords": [
+		"http server",
+		"dev server",
+		"hot reload",
+		"hot reloading"
+	],
+	"homepage": "https://github.com/e280/spark#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/e280/spark.git"
+	},
+	"bugs": {
+		"url": "https://github.com/e280/spark/issues"
+	}
+}
