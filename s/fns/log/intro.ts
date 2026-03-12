@@ -37,5 +37,7 @@ export const logIntro = (options: {
 			.to(color.cyan)
 			.done(),
 	)
+
+	console.log("")
 }
 
