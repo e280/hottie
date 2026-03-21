@@ -14,7 +14,7 @@ serves `./x/` at `http://localhost:8080`, and refreshes the browser when files c
 - **--port**  
     http port to serve on. *(default `8080`)*
 - **--debounce**  
-    file watcher hesitation in milliseconds. *(default `100`)*
+    file watcher hesitation in milliseconds. *(default `250`)*
 - **--proxy**  
     requests fallback to this proxy url.
 - **--cold, -c**  

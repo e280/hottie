@@ -15,7 +15,7 @@ await cli(process.argv, {
 			port: param.default(number, "8080", {
 				help: "http port.",
 			}),
-			debounce: param.default(number, "100", {
+			debounce: param.default(number, "250", {
 				help: "file watcher hesitation in milliseconds.",
 			}),
 			proxy: param.optional(string, {
