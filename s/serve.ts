@@ -1,4 +1,5 @@
 
+import {nap} from "@e280/stz"
 import {Options} from "./fns/types.js"
 import {logIntro} from "./fns/log/intro.js"
 import {onChange} from "./fns/on-change.js"
@@ -13,6 +14,7 @@ export async function serve(options: Options) {
 
 	if (!options.cold) {
 		let count = 1
+		await nap(1_000 + options.debounce)
 		onChange(options, () => {
 			logReload(count++)
 			sendReload()
